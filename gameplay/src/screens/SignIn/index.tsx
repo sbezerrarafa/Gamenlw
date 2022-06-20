@@ -20,7 +20,7 @@ export function SignIn() {
 
       <View style={style.content}>
         <Text style={style.title}>
-          Organize {`\n`}suas Jogatinas {`\n`}Facilmente
+          Conecte-se{`\n`}e organize suas{`\n`}Jogatinas
         </Text>
         <Text style={style.subTitle}>
           Crie grupos para jogar seus games{`\n`} faboritos com seus amigos
