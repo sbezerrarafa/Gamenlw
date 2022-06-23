@@ -1,13 +1,15 @@
 import React from 'react';
-
-import {View, TouchableOpacity, TouchableOpacityProps} from 'react-native';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import {TouchableOpacity, TouchableOpacityProps} from 'react-native';
 import {styles} from './styles';
+import {theme} from '../../global/styles/themme';
 
-type Props = TouchableOpacityProps & {
-  title?: string;
-};
-export function ButtonAdd({...rest}: Props) {
+export function ButtonAdd({...rest}: TouchableOpacityProps) {
   return (
-    <TouchableOpacity style={styles.container} {...rest}></TouchableOpacity>
+    <>
+      <TouchableOpacity style={styles.container} {...rest}>
+        <FontAwesome5 name={'plus'} size={24} color={theme.colors.heading} />
+      </TouchableOpacity>
+    </>
   );
 }
