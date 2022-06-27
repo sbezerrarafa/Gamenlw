@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 // import {View, Text, Image, StyleSheet} from 'react-native';
 
-// export default class Splash extends Component {
+// interface Props {
+//   navigation: any;
+// }
+// export default class Splash extends React.Component<Props> {
 //   componentDidMount = () => {
 //     setTimeout(() => {
 //       this.props.navigation.navigate('App');
