@@ -4,6 +4,7 @@ import {theme} from '../global/styles/themme';
 
 import {Home} from '../screens/Home';
 import {SignIn} from '../screens/SignIn';
+import Splash from '../screens/Splash';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ export function AuthRoutes() {
         },
         headerShown: false,
       }}>
+      <Screen name="Splash" component={Splash} />
       <Screen name="SignIn" component={SignIn} />
       <Screen name="Home" component={Home} />
     </Navigator>
