@@ -9,9 +9,11 @@ import {Appointments} from '../../components/Appointments';
 import {styles} from './styles';
 import {ListDivider} from '../../components/ListDivider';
 import {Background} from '../../components/Background';
+import {useNavigation} from '@react-navigation/core';
 
 export function Home() {
   const [category, setCategory] = useState('');
+  const navigation = useNavigation();
 
   const appointments = [
     {
@@ -45,6 +47,11 @@ export function Home() {
   function handleCategorySelect(categoryId: string) {
     categoryId === category ? setCategory('') : setCategory(categoryId);
   }
+
+  function handleAppointmentDetails() {
+    navigation.navigate('AppointmentDetails');
+  }
+
   return (
     <Background>
       <View style={styles.header}>
@@ -61,7 +68,9 @@ export function Home() {
         <FlatList
           data={appointments}
           keyExtractor={item => item.id}
-          renderItem={({item}) => <Appointments data={item} />}
+          renderItem={({item}) => (
+            <Appointments onPress={handleAppointmentDetails} data={item} />
+          )}
           ItemSeparatorComponent={() => <ListDivider />}
           style={styles.matches}
           showsVerticalScrollIndicator={false}
