@@ -15,7 +15,7 @@ export default class Splash extends React.Component<Props> {
     return (
       <View style={style.container}>
         <Image source={require('../assets/splash.png')} style={style.image} />
-        <Text style={style.header}>Game</Text>
+        <Text style={style.header}>Game Rafa</Text>
       </View>
     );
   }

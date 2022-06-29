@@ -9,7 +9,7 @@ import PlayerSvg from '../../assets/player.svg';
 import CalendarSvg from '../../assets/calendar.svg';
 import {theme} from '../../global/styles/themme';
 
-export type GuildProps = {
+export type ServidorProps = {
   id: string;
   icon: null;
   owner: boolean;
@@ -18,7 +18,7 @@ export type GuildProps = {
 
 export type AppointmentProps = {
   id: string;
-  server: GuildProps;
+  server: ServidorProps;
   category: string;
   date: string;
   description: string;
