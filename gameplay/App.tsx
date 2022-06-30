@@ -2,8 +2,8 @@ import React from 'react';
 import {StatusBar} from 'react-native';
 import {Background} from './src/components/Background';
 import {Routes} from './src/routes';
-import {Home} from './src/screens/Home';
-import {SignIn} from './src/screens/SignIn';
+
+import {AuthProvider} from './src/hooks/auth';
 
 export default function App() {
   return (
@@ -13,8 +13,10 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {/* <SignIn /> */}
-      <Routes />
+
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </Background>
   );
 }
