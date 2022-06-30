@@ -16,6 +16,36 @@ export function Servidores({handleGuildSelect}: Props) {
       icon: null,
       owner: true,
     },
+    {
+      id: '2',
+      name: 'Lendários',
+      icon: null,
+      owner: true,
+    },
+    {
+      id: '3',
+      name: 'Lendários',
+      icon: null,
+      owner: true,
+    },
+    {
+      id: '4',
+      name: 'Lendários',
+      icon: null,
+      owner: true,
+    },
+    {
+      id: '5',
+      name: 'Lendários',
+      icon: null,
+      owner: true,
+    },
+    {
+      id: '6',
+      name: 'Lendários',
+      icon: null,
+      owner: true,
+    },
   ];
   return (
     <View style={styles.container}>
@@ -26,7 +56,9 @@ export function Servidores({handleGuildSelect}: Props) {
           <Servidor data={item} onPress={() => handleGuildSelect(item)} />
         )}
         showsVerticalScrollIndicator={false}
-        ItemSeparatorComponent={() => <ListDivider />}
+        ItemSeparatorComponent={() => <ListDivider isCentered />}
+        ListHeaderComponent={() => <ListDivider isCentered />}
+        contentContainerStyle={{paddingBottom: 68, paddingTop: 103}}
         style={styles.guilds}
       />
     </View>

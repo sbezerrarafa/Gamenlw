@@ -3,18 +3,13 @@ import {TouchableOpacity, TouchableOpacityProps} from 'react-native';
 import {Text, View} from 'react-native';
 import {categories} from '../../utils/categories';
 import {GuildIcon} from '../GuildIcon';
+import LinearGradient from 'react-native-linear-gradient';
 
 import {styles} from './styles';
 import PlayerSvg from '../../assets/player.svg';
 import CalendarSvg from '../../assets/calendar.svg';
 import {theme} from '../../global/styles/themme';
-
-export type ServidorProps = {
-  id: string;
-  icon: null;
-  owner: boolean;
-  name: string;
-};
+import {ServidorProps} from '../Servidor';
 
 export type AppointmentProps = {
   id: string;
@@ -35,7 +30,11 @@ export function Appointments({data, ...rest}: Props) {
   return (
     <TouchableOpacity {...rest}>
       <View style={styles.container}>
-        <GuildIcon />
+        <LinearGradient
+          style={styles.guildIconContainer}
+          colors={[theme.colors.secondary50, theme.colors.secondary70]}>
+          <GuildIcon />
+        </LinearGradient>
         <View style={styles.content}>
           <View style={styles.header}>
             <Text style={styles.title}>{data.server.name}</Text>

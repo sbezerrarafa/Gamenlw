@@ -35,7 +35,7 @@ export function Header({title, action}: Props) {
         />
       </TouchableOpacity>
       <Text style={styles.title}>{title}</Text>
-      {action && <View>{action}</View>}
+      {action ? <View>{action}</View> : <View style={{width: 24}}></View>}
     </LinearGradient>
   );
 }
